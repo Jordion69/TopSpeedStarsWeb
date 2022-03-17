@@ -1,0 +1,197 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+/********************* MAIN **********************/
+:root {
+  --bg-red: rgb(255, 88, 88);
+  --text-red: rgb(255, 244, 244);
+  --white: #fafafa;
+  --blue: rgb(217, 238, 255);
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  font-size: 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg-body);
+}
+
+h1 {
+  font-size: 2rem;
+  padding: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+section {
+  margin: 1rem 3rem;
+}
+
+.element {
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  grid-gap: 1rem;
+  justify-content: space-between;
+  background-color: var(--blue);
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0,0,0,0.05), 0 0.5rem 1.125rem rgba(75,0,0,0.05);
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  border-radius: 5px;
+  border: 0;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.overlay {
+  position: relative;
+  transition: all 1s;
+}
+
+.overlay:after {
+  content: '';
+  position: absolute;
+  width: 100%; 
+  height: 100%;
+  top: 0; 
+  left: 0;
+  background: rgba(0,0,0,0.15);
+  border-radius: inherit;
+  opacity: 1;
+  transition: all 0.5s;
+}
+.overlay:hover:after { 
+  opacity: 0;
+}
+
+.remove-btn {
+  background-color: var(--bg-red);
+  color: var(--text-red);
+}
+
+.btn-normal {
+  border: 1px solid var(--bg-red);
+  color: var(--text-red);
+}
+
+.btn-group {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 1rem 0 1rem;
+}
+
+.modal {
+  position: absolute;
+  box-shadow: 0.2px 0.6px 0.5px 0.5px rgba(0,0,0,0.5);
+  width: 40vw;
+  max-width: 500px;
+  background-color: rgb(211, 211, 211);
+  border-radius: 4px;
+  padding: 3rem 4rem;
+  z-index: 2;
+}
+
+.modal-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.backdrop {
+  background: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+}
+
+form {
+  margin: 0 auto;
+  width: 50vw;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+input {
+  margin: 1rem;
+  width: 10rem;
+  height: 2rem;
+  border: solid 1px rgb(211, 211, 211);
+}
+
+:root {
+	--darkColor: #191919;
+	--mediumColor: #8c8c8c;
+	--lightColor: #e8e8e8;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-size: 16px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
