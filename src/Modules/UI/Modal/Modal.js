@@ -20,11 +20,10 @@ function Modal(props) {
                             <Button onClick={props.onClose}>Close</Button>
                         </>
                     ) : (
-                        <Button onClick={props.onClose}>
-                            <div className="d-flex  flex-row-reverse m-4">
+                        <Button className="bg-danger"onClick={props.onClose}>
+                            <div c>
                                 <AiFillCloseCircle className="bg-black text-white" />
                             </div>
-                            Close
                         </Button>
                     )}
                 </ButtonGroup>

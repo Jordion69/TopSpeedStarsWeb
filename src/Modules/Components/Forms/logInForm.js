@@ -50,7 +50,7 @@ export default function LogInForm(props) {
     }
 
     return (
-        <div className="">
+        <div className="container">
             <form onSubmit={executeConfirm} className="col-12">
                 <div className="form-group">
                     <Input id="email" label="Email" className="form-control m-0 form-label" type="mail" startVal="" placeholder="email" validation={testEmail} timer={200}></Input>

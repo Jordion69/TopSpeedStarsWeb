@@ -54,7 +54,7 @@ export default function LogInForm(props) {
     }
 
     return (
-        <div className="">
+        <div className="container">
             <form onSubmit={executeConfirm} className="col-12">
                 <div className="form-group mt-4">
                     <Input id="username" label="Username" className="form-control m-0 form-label" type="text" startVal="" placeholder="username" validation={testUsername} timer={200}></Input>
