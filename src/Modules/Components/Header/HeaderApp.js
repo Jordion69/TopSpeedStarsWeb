@@ -34,8 +34,7 @@ export default function HeaderApp(props) {
 	<header className='navbar container-fluid row'>
 	
 	<div className="col-6 bg-dark ">
-	<HeaderMenu items={MENU}/>
-
+		<HeaderMenu items={MENU}/>
 	</div>
 	<div className='col-6 bg-dark d-flex flex-row-reverse'>
 		<HeaderSocialMedia/>

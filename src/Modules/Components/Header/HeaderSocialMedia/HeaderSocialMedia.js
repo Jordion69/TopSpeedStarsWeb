@@ -23,14 +23,10 @@ export default function HeaderSocialMedia() {
 		</Dropdown></li>
 		<li className='nav-link fw-light fs-6'>
 			<HeaderUserLogin/>
-		</li>
-		
+		</li>	
 	</ul>
 	<div>
-	</div>
-
-
-	  
+	</div>  
 	</div>
   )
 }
