@@ -8,6 +8,7 @@ import Ranking from './Modules/Components/Ranking/Ranking';
 import Multimedia from './Modules/Components/Multimedia/Multimedia';
 import Blog from './Modules/Components/Blog/Blog';
 import MainApp from './Modules/MainApp';
+import Footer from './Modules/Layouts/Footer'
 
 
 
@@ -27,8 +28,11 @@ function App() {
 
           </Route>
           
+          
         </Routes>
-        <MainApp/>
+
+        <Footer/>
+        
      </BrowserRouter>
      
     </>

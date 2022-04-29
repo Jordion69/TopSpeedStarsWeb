@@ -22,7 +22,7 @@ function Modal(props) {
                     ) : (
                         <Button className="bg-danger"onClick={props.onClose}>
                             <div c>
-                                <AiFillCloseCircle className="bg-black text-white" />
+                                <AiFillCloseCircle className="bg-danger text-white" />
                             </div>
                         </Button>
                     )}

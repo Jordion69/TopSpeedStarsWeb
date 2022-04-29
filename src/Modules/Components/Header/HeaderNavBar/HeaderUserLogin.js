@@ -43,17 +43,19 @@ function openRegisterModalFunc() {
 	  <div>
 
     {!auth? 
-      <Button onClick={removeHandler}>
-        <FaUserAlt className=""></FaUserAlt>
+      <Button className="w-1.5" onClick={removeHandler}>
+        <FaUserAlt style={{color: 'red', fontSize:'1em'}}></FaUserAlt>
       </Button> :
       <Button>
-        <FaUserCheck onClick={removeLogin}/>
+        <FaUserCheck style={{color: 'red', fontSize:'1em'}} className="" onClick={removeLogin}/>
       </Button>  }
       {	
+        
         logInModalOpen && 
-        <Modal cancel={closeLogInModal}  onClose={closeLogInModal} confirm={setLogInModalOpen}>
+        <Modal className="bg-light" cancel={closeLogInModal}  onClose={closeLogInModal} confirm={setLogInModalOpen}>
           <LogInForm cancel={closeLogInModal} registerOpener={openRegisterModalFunc}></LogInForm>
         </Modal>
+        
       }
       {	
         registerModalOpen && 

@@ -1,6 +1,6 @@
 import React from 'react'
 import HeaderApp from './Components/Header/HeaderApp'
-import Footer from './Components/Footer/Footer'
+import Footer from './Layouts/Footer'
 import Video from './Components/Main/Video/Video'
 import Explanation from './Components/Main/Explanation/Explanation'
 import Features from './Components/Main/Features/Features'
@@ -18,9 +18,6 @@ export default function MainApp() {
         <Explanation/>
         <Features/>
       </main>
-      <footer>
-        <Footer/>
-      </footer>
       
     </div>
   )
