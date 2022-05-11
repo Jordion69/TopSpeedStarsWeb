@@ -1,18 +1,19 @@
 .modal {
   position: absolute;
   margin-top: 7rem;
-  top: 50%;
+  top: 40%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 40vw;
+  width: 100vw;
   height: auto;
   max-height: 700px;
-  max-width: 500px;
-  background-color: rgb(32, 30, 30);
-  border-radius: 4px;
+  max-width: 600px;
+  background-color: rgb(250, 243, 243);
+  border-radius: 30px;
   padding: 3rem 4rem;
   z-index: 2;
 }
+
 
 .remove-btn {
   background-color: rgb(255,88,88);

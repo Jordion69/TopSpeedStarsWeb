@@ -58,60 +58,57 @@ export default function Features() {
 
         <>
             <Container>
-			<h1 className="text-center">Features</h1>
+			<h1 className="text-center text-primary">CARACTERÍSTIQUES</h1>
                 <Row>
                     <Col lg={4}>
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia component="img" alt="green iguana" image="https://placeimg.com/400/400/rocketspace" />
+                            <CardMedia component="img" alt="multiplayer" src='Images/feature1.jpg' />
 
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    Lizard
+                                <Typography gutterBottom variant="h4" component="div">
+                                    MULTIJUGADOR
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
-                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antar
+                                    Joc multijugador, pots jugar amb gent d'arreu del mon o amb el teus amics. 
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Sent la emoció de competir amb els millors racers del món.
                                 </Typography>
                             </CardContent>
-                            <CardActions>
-                                <Button size="small">Share</Button>
-                                <Button size="small">Learn More</Button>
-                            </CardActions>
+                            
                         </Card>
                     </Col>
 					<Col lg={4}>
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia component="img" alt="green iguana" image="https://placeimg.com/400/400/rocketspace" />
+                            <CardMedia component="img" alt="green iguana" src='Images/feature2.png' />
 
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    Lizard
+                                <Typography gutterBottom variant="h4" component="div">
+                                   ESCULL MAPA
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
-                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antar
+                                    3 circuits on et trobaràs un munt de obstacles que probaran els teus reflexes.
                                 </Typography>
+                                
                             </CardContent>
-                            <CardActions>
-                                <Button size="small">Share</Button>
-                                <Button size="small">Learn More</Button>
-                            </CardActions>
+                           
                         </Card>
                     </Col>
 					<Col lg={4}>
                         <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia component="img" alt="green iguana" image="https://placeimg.com/400/400/rocketspace" />
+                            <CardMedia component="img" alt="green iguana" src='Images/feature3.jpg' />
 
                             <CardContent>
-                                <Typography gutterBottom variant="h5" component="div">
-                                    Lizard
+                                <Typography gutterBottom variant="h4" component="div">
+                                    RANKING MUNDIAL
                                 </Typography>
                                 <Typography variant="body2" color="text.secondary">
-                                    Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antar
+                                    Coneix la teva posició en la lliga mundial. Millora cada segon a segon i ves escalant en el ranking.
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    Sigues el millor del món. Tu pots.
                                 </Typography>
                             </CardContent>
-                            <CardActions>
-                                <Button size="small">Share</Button>
-                                <Button size="small">Learn More</Button>
-                            </CardActions>
                         </Card>
                     </Col>
                 </Row>

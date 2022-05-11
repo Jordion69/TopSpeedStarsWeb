@@ -5,6 +5,7 @@ import Video from './Components/Main/Video/Video'
 import Explanation from './Components/Main/Explanation/Explanation'
 import Features from './Components/Main/Features/Features'
 import MainSentence from './Components/Main/MainSentence/MainSentence'
+import AboutUs from './Components/Main/AboutUs.js/AboutUs'
 
 export default function MainApp() {
   return (
@@ -13,10 +14,10 @@ export default function MainApp() {
         <HeaderApp/>
       </header> */}
       <main>
-        <MainSentence/>
         <Video/>
         <Explanation/>
         <Features/>
+        <AboutUs/>
       </main>
       
     </div>

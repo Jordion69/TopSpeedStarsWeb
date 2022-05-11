@@ -13,7 +13,7 @@ export default function MainSentence() {
                         </Card>
                     </Col>
 					<Col lg={8}>
-					<Card.Title className="text-center fs-1 fw-bold badge bg-success text-wrap" >GAUDEIX DE CADA VOLTA</Card.Title>
+					<Card.Title className="fs-1 fw-bold badge bg-success col-auto text-center" >GAUDEIX DE CADA VOLTA</Card.Title>
 
 					</Col>
                 </Row>

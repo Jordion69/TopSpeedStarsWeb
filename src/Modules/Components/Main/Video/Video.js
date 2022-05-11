@@ -1,19 +1,21 @@
 import React from "react";
 import ReactPlayer from "react-player";
 import { Container, Row, Col } from "react-bootstrap";
+import style from "./video.module.css";
 
 export default function Video() {
     return (
         <>
-            <Container className="mt-4" >
-                <Row className="d-flex flex-row justify-content-center alig-items-center" >
-                   <Col sm={2}/>
-				    <Col sm={8}>
-                        <ReactPlayer url={"https://www.youtube.com/embed/qLyi4-3pUQM"} playing={true} />
-                    </Col>
-					<Col sm={2}/>
-                </Row>
-            </Container>
+            <div className="container">
+                <Container className="container">
+                    <Row className="">
+                        <Col sm={12}>
+                            <ReactPlayer className="border-2 border-light w-100 h-auto" url={["Video/starWars.mp4"]} playing controls />
+                        </Col>
+                    </Row>
+                </Container>
+            </div>
         </>
     );
 }
+

@@ -61,7 +61,13 @@ table {
 body {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
-  background-color: var(--bg-body);
+  /* background-color: var(--bg-body); */
+  background-image: url(../public/Images/StarSkybox.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 100vh;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 h1 {

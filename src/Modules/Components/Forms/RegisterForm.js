@@ -6,6 +6,9 @@ import LinkRegister from "../../Components/Header/HeaderMessage/LinkRegister";
 import Button from "../../UI/Button/Button";
 import { useState } from "react";
 import * as utils from "../../Utils/utils";
+import { AiFillCloseCircle } from "react-icons/ai";
+import { Form, FormGroup } from 'react-bootstrap'
+
 
 export default function LogInForm(props) {
     const { children, onCancel } = props;
@@ -54,45 +57,78 @@ export default function LogInForm(props) {
     }
 
     return (
-        <div className="container">
-            <form onSubmit={executeConfirm} className="col-12">
-                <div className="form-group mt-4">
-                    <Input id="username" label="Username" className="form-control m-0 form-label" type="text" startVal="" placeholder="username" validation={testUsername} timer={200}></Input>
-                </div>
-                <div className="form-group">
-                    <Input id="email" label="Email" className="form-control m-0 form-label" type="mail" startVal="" placeholder="email" validation={testEmail} timer={200}></Input>
-                </div>
-                <div className="form-group mt-4">
-                    <Input id="pwd" label="Password" className="form-control m-0 form-label" type="password" startVal="" placeholder="password" validation={testPwd} timer={200}></Input>
-                </div>
-                <div className="form-group mt-4">
-                    <Input
-                        id="pwd2"
-                        label="Confirm Password"
-                        className="form-control m-0 form-label"
-                        type="confirm password"
-                        startVal=""
-                        placeholder="password"
-                        validation={testPwd}
-                        timer={200}
-                    ></Input>
-                </div>
-                {/* <div className="mt-4">
-                    <FaGoogle className="m-2" />
-                    <button className="btn btn-primary" onClick={executeConfirm}>
-                        Login with google
-                    </button>
-                </div>*/}
-                <Button className="mb-3">
-                    <FaArrowAltCircleRight className="btn btn-success text-white mt-4" />
+        <div className="container bg-light">
+         <div className="row h-75  justify-content-center">
+                <div className="col-auto h-25 inline-block mt-4 p-5">
+                    <div className="mb-3 h-100">
+                        <AiFillCloseCircle onClick={closeModal} className="text-dark"  />
+                    </div>
+            <Form onSubmit={executeConfirm} className="col-12">
+            <FormGroup>
+                <Form.Label>User name</Form.Label>
+                    <Form.Control id="username" 
+                    label="Username"
+                    className="form-control m-0 form-label" 
+                    type="text" 
+                    startVal="" 
+                    placeholder="username" 
+                    validation={testUsername} 
+                    timer={200}
+                    ></Form.Control>
+                
+                </FormGroup>
+                <FormGroup>
+                <Form.Label>EMail</Form.Label>
+                    <Form.Control id="username" 
+                    label="email"
+                    className="form-control m-0 form-label" 
+                    type="mail" 
+                    startVal="" 
+                    placeholder="email" 
+                    validation={testEmail} 
+                    timer={200}
+                    ></Form.Control>
+                    </FormGroup>
+                    <FormGroup>
+                <Form.Label>Password</Form.Label>
+                    <Form.Control id="pwd" 
+                    label="password"
+                    className="form-control m-0 form-label" 
+                    type="pwd" 
+                    startVal="" 
+                    placeholder="password" 
+                    validation={testPwd} 
+                    timer={200}
+                    ></Form.Control>               
+                </FormGroup>
+                <FormGroup>
+                <Form.Label>Repeat password</Form.Label>
+                    <Form.Control id="repeatPwd" 
+                    label="Repeat password"
+                    className="form-control m-0 form-label" 
+                    type="pwd" 
+                    startVal="" 
+                    placeholder="repeat password" 
+                    validation={testPwd} 
+                    timer={200}
+                    ></Form.Control>
+                
+                </FormGroup>
+               
+                <div className="mt-4" >
+                <Button className=" mb-3">
+                    <FaArrowAltCircleRight size={50} style={{ fill: "white" }} className="" />
                 </Button>
-                <div className="mb-3">
+                </div>
+                {/* <div className="mb-3">
                     <MessageUserUnknown />
+                </div> */}
+                <div className="mt-4">
+                    <LinkRegister  onClick={executeRegister} >Log In</LinkRegister>
                 </div>
-                <div className="mb-3">
-                    <LinkRegister onClick={executeRegister} >Log In</LinkRegister>
-                </div>
-            </form>
+            </Form>
+            </div>
+            </div>
         </div>
     );
 }

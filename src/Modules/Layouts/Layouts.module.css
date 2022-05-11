@@ -1,0 +1,19 @@
+.xarxesContainer {
+	display: flex;
+	height: 10vh;
+	align-items: center;
+	justify-content: center;
+}
+.xarxesContainer a {
+	display: inline-block;
+	margin-right: 20px;
+}
+.xarxesContainer a:hover{
+	background-color: rgb(98, 27, 41);
+}
+
+.bg {
+	background-color: rgb(17, 17, 18);
+}
+
+

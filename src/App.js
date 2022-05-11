@@ -9,6 +9,7 @@ import Multimedia from './Modules/Components/Multimedia/Multimedia';
 import Blog from './Modules/Components/Blog/Blog';
 import MainApp from './Modules/MainApp';
 import Footer from './Modules/Layouts/Footer'
+import Foro from './Modules/Components/Foro/Foro';
 
 
 
@@ -24,7 +25,7 @@ function App() {
             <Route path='Ranking' element={<Ranking/>}/>
             <Route path='Multimedia' element={<Multimedia/>}/>
             <Route path='Blog' element={<Blog/>}/>
-            <Route path='Blog' element={<Blog/>}/>
+            <Route path='Foro' element={<Foro/>}/>
 
           </Route>
           
