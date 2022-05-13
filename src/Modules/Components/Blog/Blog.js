@@ -4,7 +4,7 @@ import BlogBox from './BlogBox'
 export default function Blog() {
   return (
 	<div>
-	  <p>Blog</p>
+	  <p style={{color: 'white', fontSize:25}}>Blog</p>
 	  <BlogBox/>
 	</div>
   )
