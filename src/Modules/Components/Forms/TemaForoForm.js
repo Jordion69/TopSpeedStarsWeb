@@ -18,7 +18,7 @@ export default function TemaForoForm(props) {
         console.log('test1')
         e.preventDefault();
         const data = {
-			userId: '',
+			userId: sessionStorage.getItem('user-id'),
             title: temaRef.current.value,
             text: textTemaRef.current.value,
         };

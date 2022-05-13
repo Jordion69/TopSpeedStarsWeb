@@ -40,7 +40,7 @@ const useHttp = () => {
       console.log(data);
       manageData(data);
     } catch(err) {
-      console.log('Use https ', error)
+      console.log('Use https ', err)
       setError(err.message || 'Something went wrong!');
       const data = {
         status: 500,

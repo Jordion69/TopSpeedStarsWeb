@@ -13,7 +13,7 @@ export default function BiggerBox(props) {
                             <div className="col-8 offset-mr-1 bg-light border rounded-4">
                                 <div className="row d-flex align-items-center ">
                                 <div className="col-3">
-                                <img src={props.url} className="rounded-circle"alt="avatar" />
+                                {/*<img src={props.url} className="rounded-circle"alt="avatar" />*/}
                                 </div>
                                 <div className="col-9">
                                     <h2 className="text-center">{props.time}</h2>

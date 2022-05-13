@@ -24,11 +24,9 @@ const [loading, setLoading] = useState(false)
                 },
             });
             const rankingList = await resp.json();
-            console.log(rankingList.body);
-            setRankingList(rankingList.body);
+            setRankingList(rankingList);
             setLoading(false)
         } catch (error) {
-            console.log(error);
             setLoading(false)
         }
     };
@@ -43,17 +41,19 @@ const [loading, setLoading] = useState(false)
   return (
 	<section>
 
-	
 
-	  
     <Flag/>
-    <Loading
+    {
+        loading && <Loading
       animation='border'
       variant='light'
     />
+    }
+    
     {/* <div>{!rankingList ? <Spinner /> : rankingList.body.map((item) => <BiggerBox key={item.id} count={count + 1} url={item.url} time={item.time}  />)}</div> */}
 
-	<BiggerBox/>
+    {rankingList.map((time, index) => (<BiggerBox time={time.lapTime} count={index + 1} url={time.userId}/>))}
+	
 
 	</section>
   )

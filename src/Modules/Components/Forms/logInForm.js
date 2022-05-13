@@ -28,7 +28,16 @@ export default function LogInForm(props) {
             const result = await utils.bodyRequest("https://topspeedstarsapi.herokuapp.com/api/login", data, "POST");
             console.log(result.data.access_token);
 
+            const email = {
+                email: emailRef.current.value
+            }
+            const infoUser = await utils.bodyRequest("https://topspeedstarsapi.herokuapp.com/api/userInfo", email, "POST");
             utils.saveSessionStorage("react-token", result.data.access_token);
+            console.log(infoUser)
+            console.log(infoUser.data)
+            console.log(infoUser.data.body)
+            console.log(infoUser.data.body[0].id)
+            utils.saveSessionStorage("user-id", infoUser.data.body[0].id);
             // login correcte
             console.log(result);
             emailRef.current.value = "";

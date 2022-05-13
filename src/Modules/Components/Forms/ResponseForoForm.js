@@ -3,6 +3,7 @@ import { Form, Button } from "react-bootstrap";
 import { AiFillCloseCircle } from "react-icons/ai";
 import { useState, useRef } from 'react';
 import * as utils from "../../Utils/utils";
+import { get } from 'react-hook-form';
 
 
 export default function TemaForoForm(props) {
@@ -15,20 +16,16 @@ export default function TemaForoForm(props) {
     async function executeConfirm(e) {
         console.log('test1')
         e.preventDefault();
+
         const data = {
-			userId: '',
-			temaId: '',
+			userId: sessionStorage.getItem('user-id'),
+			temaId: props.temaId,
             text: textResponseRef.current.value,
         };
         console.log(data);
         try {
             const result = await utils.bodyRequest("https://topspeedstarsapi.herokuapp.com/api/respuestas", data, "POST");
-            console.log(result.data.access_token);
-
-            utils.saveSessionStorage("react-token", result.data.access_token);
-            // login correcte
-            console.log(result);
-            temaRef.current.value = "";
+    
             textResponseRef.current.value = "";
             closeModal();
         } catch (e) {
