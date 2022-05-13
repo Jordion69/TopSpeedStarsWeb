@@ -5,33 +5,31 @@ import { useState, useRef } from 'react';
 import * as utils from "../../Utils/utils";
 
 
-
 export default function TemaForoForm(props) {
 
 	const { children, onCancel } = props;
     const [tema, setTema] = useState("");
-    const [textTema, setTextTema] = useState("");
     const temaRef = useRef(null)
-    const textTemaRef = useRef(null)
+    const textResponseRef = useRef(null)
 
     async function executeConfirm(e) {
         console.log('test1')
         e.preventDefault();
         const data = {
 			userId: '',
-            title: temaRef.current.value,
-            text: textTemaRef.current.value,
+			temaId: '',
+            text: textResponseRef.current.value,
         };
         console.log(data);
         try {
-            const result = await utils.bodyRequest("https://topspeedstarsapi.herokuapp.com/api/temas", data, "POST");
+            const result = await utils.bodyRequest("https://topspeedstarsapi.herokuapp.com/api/respuestas", data, "POST");
             console.log(result.data.access_token);
 
             utils.saveSessionStorage("react-token", result.data.access_token);
             // login correcte
             console.log(result);
             temaRef.current.value = "";
-            textTemaRef.current.value = "";
+            textResponseRef.current.value = "";
             closeModal();
         } catch (e) {
             // login incorrecte
@@ -42,10 +40,10 @@ export default function TemaForoForm(props) {
         setTema(tema);
         return tema;
     }
-    function testTextTema(textTema) {
-        setTextTema(textTema);
-        return textTema;
-    }
+    // function testTextTema(textTema) {
+    //     setTextTema(textTema);
+    //     return textTema;
+    // }
     function closeModal() {
         props.cancel();
     }
@@ -59,20 +57,6 @@ export default function TemaForoForm(props) {
                         <AiFillCloseCircle onClick={closeModal} className="text-dark"  />
                     </div>
                     <Form onSubmit={executeConfirm} className="col-12">
-                        <Form.Group className="">
-                            <Form.Label>Tema</Form.Label>
-                            <Form.Control
-                                name="tema"
-                                id="tema"
-                                className="form-control my-2 form-label"
-                                type="text"
-                                startVal=""
-                                placeholder="tema"
-                                validation={testTema}
-                                ref={temaRef}
-                                timer={200}
-                            ></Form.Control>
-                        </Form.Group>
                         <Form.Group className="mb-3">
                             <Form.Label>Text</Form.Label>
                             <Form.Control
@@ -82,14 +66,14 @@ export default function TemaForoForm(props) {
                                 id="textTema"
                                 className="form-control my-2 form-label"
                                 startVal=""
-                                ref={textTemaRef}
+                                ref={textResponseRef}
                                 placeholder="text tema"
-                                validation={testTextTema}
                                 timer={200}
                             ></Form.Control>
                         </Form.Group>
+
                         <Button className="mb-2 bg-primary" type="submit">
-                           Create
+                           Response
                         </Button>
                     </Form>
                 </div>

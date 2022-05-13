@@ -18,10 +18,10 @@ export function AuthContextProvider(props) {
 
 
   const getToken = () => {
-    const token = JSON.parse(sessionStorage.getItem('react-token'));
+    const token = sessionStorage.getItem('react-token');
     console.log('getToken', token)
     try {
-      if (token.accessToken) {
+      if (token) {
         setToken(token);
         setCorrectToken(true)
         return true;
@@ -37,7 +37,7 @@ export function AuthContextProvider(props) {
   const compareTokens = () => {
 
     try {
-      const tokenResult = JSON.parse(sessionStorage.getItem('react-token'));
+      const tokenResult = sessionStorage.getItem('react-token');
       //console.log(token)
       //console.log('t', tokenResult.accessToken)
       //console.log('t2', token.accessToken)
@@ -67,7 +67,7 @@ export function AuthContextProvider(props) {
   function setTokenSessionStorage(token) {
     if (token.accessToken) {
       setToken(token)
-      const srtToken = JSON.stringify(token)
+      const srtToken = token
       sessionStorage.setItem('react-token', srtToken)
       setCorrectToken(true)
     } else {

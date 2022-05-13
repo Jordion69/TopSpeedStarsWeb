@@ -60,8 +60,10 @@ table {
 
 body {
   font-size: 18px;
-  font-family: Arial, Helvetica, sans-serif;
+  /*font-family: Arial, Helvetica, sans-serif;
   /* background-color: var(--bg-body); */
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Share Tech Mono', monospace;
   background-image: url(../public/Images/StarSkybox.png);
 	background-repeat: no-repeat;
 	background-position: center center;

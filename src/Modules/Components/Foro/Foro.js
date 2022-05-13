@@ -8,7 +8,6 @@ export default function Foro() {
   return (
 	<ForoState>
 	  <ForoList/>
-	  <ForoDetails/>
 	</ForoState>
   )
 }

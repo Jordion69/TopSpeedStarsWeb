@@ -5,7 +5,7 @@ export default function BiggerBox(props) {
         <>
             <div className="container">
                 <div className="row ">
-                    <div className="col-md-4 offset-md-4 border border-light border-5 rounded- bg-primary bg-gradient">
+                    <div className="col-md-4 offset-md-4 border border-light border-5 rounded- bg-success bg-gradient" >
                         <div className="row d-flex align-items-center">
                             <div className="col-3">
                                 <h1 className="text-warning">{props.count}</h1>

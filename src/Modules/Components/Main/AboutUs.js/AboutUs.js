@@ -9,8 +9,8 @@ export default function AboutUs() {
 			<h1 className="text-center text-primary">SOBRE NOSALTRES</h1>
                 <Row>
                     <Col lg={4}>
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia  component="img" alt="Marc Gaspar fot de perfil" image="https://placeimg.com/400/400/people" />
+                        <Card sx={{ maxWidth: 345, height: 550 }}>
+                            <CardMedia  component="img" alt="Marc Gaspar fot de perfil" image="Images/avatar1.jpg" />
 
                             <CardContent>
                                 <Typography gutterBottom variant="h4" component="div">
@@ -27,8 +27,8 @@ export default function AboutUs() {
                         </Card>
                     </Col>
 					<Col lg={4}>
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia component="img" alt="Jordi Grau" image="https://placeimg.com/400/400/rocketspace" />
+                        <Card sx={{ maxWidth: 345, height: 550 }}>
+                            <CardMedia component="img" alt="Jordi Grau" image="Images/avatar2.webp" />
 
                             <CardContent>
                                 <Typography gutterBottom variant="h4" component="div">
@@ -45,8 +45,8 @@ export default function AboutUs() {
                         </Card>
                     </Col>
 					<Col lg={4}>
-                        <Card sx={{ maxWidth: 345 }}>
-                            <CardMedia component="img" alt="Jordi Ortiz" image="https://placeimg.com/400/400/rocketspace" />
+                        <Card sx={{ maxWidth: 345, height: 550 }}>
+                            <CardMedia component="img" alt="Jordi Ortiz" image="Images/avatar3.jpg" />
 
                             <CardContent>
                                 <Typography gutterBottom variant="h4" component="div">
