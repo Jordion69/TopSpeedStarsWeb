@@ -30,7 +30,6 @@ const [loading, setLoading] = useState(false)
             setLoading(false)
         }
     };
-    console.log(rankingList);
 
     useEffect(() => {
         getRanking(process.env.REACT_APP_BACKEND_URL + process.env.REACT_APP_BACKEND_RANKING_LIST);

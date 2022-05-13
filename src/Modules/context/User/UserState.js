@@ -19,7 +19,6 @@ export function AuthContextProvider(props) {
 
   const getToken = () => {
     const token = sessionStorage.getItem('react-token');
-    console.log('getToken', token)
     try {
       if (token) {
         setToken(token);
@@ -38,9 +37,6 @@ export function AuthContextProvider(props) {
 
     try {
       const tokenResult = sessionStorage.getItem('react-token');
-      //console.log(token)
-      //console.log('t', tokenResult.accessToken)
-      //console.log('t2', token.accessToken)
 
       if (token.accessToken === '' || tokenResult.accessToken === undefined || tokenResult.accessToken === '') {
         setCorrectToken(false)
@@ -48,17 +44,17 @@ export function AuthContextProvider(props) {
       }
 
       if (tokenResult.accessToken === token.accessToken) {
-        //console.log('same')
+
         setCorrectToken(true)
         return true
       } else {
-        //console.log('diferent')
+
         setCorrectToken(false)
         getToken()
         return false
       }
     } catch (e) {
-      //console.log(e)
+
       setCorrectToken(false)
       return false
     }

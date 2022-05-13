@@ -54,23 +54,6 @@ export default function NavbarWeb() {
                             </motion.a>
                             <div className={style.xarxesContainer}>
                            
-                            {/* <div className="dropdown" >
-                                
-                                <GiWorld className={style.xarxesContainer} style={{ fill: "white" }} size={25} href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false" />
-
-                                <ul className="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                                    <li>
-                                        <a className="dropdown-item" href="#">
-                                            Català
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a className="dropdown-item" href="#">
-                                            English
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div> */}
                             <HeaderUserLogin />
                             </div>
                         </Nav>

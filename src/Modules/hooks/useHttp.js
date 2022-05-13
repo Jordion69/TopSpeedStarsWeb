@@ -37,10 +37,8 @@ const useHttp = () => {
       }*/
       const data = await response.json();
 
-      console.log(data);
       manageData(data);
     } catch(err) {
-      console.log('Use https ', err)
       setError(err.message || 'Something went wrong!');
       const data = {
         status: 500,

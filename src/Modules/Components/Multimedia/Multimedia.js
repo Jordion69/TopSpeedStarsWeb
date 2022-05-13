@@ -19,7 +19,7 @@ export default function Multimedia() {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={`https://picsum.photos/id/${generate()}/900/500`}
+      src={"Images/Thumbnail_two.png"}
       alt="First slide"
     />
     <Carousel.Caption>
@@ -30,7 +30,7 @@ export default function Multimedia() {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={`https://picsum.photos/id/${generate()}/900/500`}
+      src={"Images/Thumbnail_One.png"}
       alt="Second slide"
     />
     <Carousel.Caption>
@@ -41,7 +41,7 @@ export default function Multimedia() {
   <Carousel.Item>
     <img
       className="d-block w-100"
-      src={`https://picsum.photos/id/${generate()}/900/500`}
+      src={"Images/Thumbnail_Three.png"}
       alt="Third slide"
     />
     <Carousel.Caption>

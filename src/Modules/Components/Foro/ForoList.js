@@ -16,18 +16,11 @@ export default function ForoList(props) {
 
     useEffect(() => {
         getForo();
-        console.log(temas);
     }, []);
 
-    // const handleCreateForo = () => {
-    //     if (!authCtx.getToken()) {
-    //         alert("No esta logat");
-    //     }
-    // }
 
     const handleClick = (id) => {
         return () => {
-            console.log(id);
             navigate("/details/" + id);
         };
     };
@@ -47,7 +40,12 @@ export default function ForoList(props) {
         openLogInModal();
     };
 
-    console.log('getToken', authCtx.getToken())
+
+    function showDate(dateStr) {
+        const d = new Date(dateStr)
+
+        return d.getDay() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear()
+    }
 
     return (
         <>
@@ -83,14 +81,13 @@ export default function ForoList(props) {
                                 {" "}
                                 {/* <tr key={tema._id} onClick={()=> console.log(tema._id)} > */}{" "}
                                 {temas.map((tema) => (
-                                    <Link to={`/details/${tema.id}`}>
+                                    
                                         <tr className="border-4 border-dark rounded-8" key={tema.id}>
                                             <th scope="row">
                                                 <img src={`Images/Avataaars${tema.user_id}.svg`} className="rounded-circle" alt="avatar" height={50} width={50} />{" "}
                                             </th>{" "}
-                                            <td> {tema.title} </td> <td> {tema.created_at} </td> <td> {tema.text} </td>{" "}
+                                            <td> <Link className="border-4 border-dark rounded-8" to={`/details/${tema.id}`}>{tema.title}</Link> </td> <td> {showDate(tema.created_at)} </td> <td> {tema.text} </td>{" "}
                                         </tr>
-                                    </Link>
                                 ))}{" "}
                             </tbody>{" "}
                         </table>{" "}

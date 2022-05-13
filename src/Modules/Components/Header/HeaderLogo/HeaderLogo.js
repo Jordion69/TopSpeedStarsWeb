@@ -11,8 +11,8 @@ export default function HeaderLogo(props) {
 	// 	  y: [200, 250, 150, 300, 0],
 	// 	  opacity: [1, 1, 0, 1, 1]
 	//   }}
-	  initial={{x: 1000}}
-	  animate={{x: 10}}
+	//   initial={{x: 1000}}
+	//   animate={{x: 10}}
 	  transition={{delay: 0.2, typ: 'spring', duration: 2}} width={props.width} height={props.height} src="Images/logoTSS.png" alt='logo'/>
 	</div>
   )

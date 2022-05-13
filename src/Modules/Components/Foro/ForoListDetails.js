@@ -13,11 +13,9 @@ export default function ForoListDetails() {
     const [temaModalOpen, setTemaModalOpen] = useState(false);
     const [respuestas, setRespuesta] = useState([])
 
-    console.log("hola");
 
     const { id } = useParams();
 
-    console.log("id", id)
 
     const { isLoading, error, setError, sendRequest: findResponses } = useHttp();
 
@@ -45,7 +43,7 @@ export default function ForoListDetails() {
     const logIncloseModal = () => setTemaModalOpen(false);
 
     function closeLogInModal() {
-        console.log("closing logIn modal");
+
         logIncloseModal();
     }
 
