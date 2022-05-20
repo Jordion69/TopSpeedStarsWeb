@@ -28,6 +28,8 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts --max_old_space_size=5411 start",
     "build": "react-scripts --max_old_space_size=411 build",
     "test": "react-scripts test",

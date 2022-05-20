@@ -51,7 +51,7 @@ const [loading, setLoading] = useState(false)
     
     {/* <div>{!rankingList ? <Spinner /> : rankingList.body.map((item) => <BiggerBox key={item.id} count={count + 1} url={item.url} time={item.time}  />)}</div> */}
 
-    {rankingList.map((time, index) => (<BiggerBox time={time.lapTime} count={index + 1} url={time.userId}/>))}
+    {rankingList.map((time, index) => (<BiggerBox time={time.lapTime} count={index + 1} url={time.userId} key={time.id}/>))}
 	
 
 	</section>

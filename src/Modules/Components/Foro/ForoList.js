@@ -71,26 +71,23 @@ export default function ForoList(props) {
             <div>
                 <div className="container border border-2">
                     <div className="row">
-                        <table class="bg-white table table-hover col-md-12 text-black">
+                        <table className="bg-white table table-hover col-md-12 text-black">
                             <thead>
                                 <tr>
-                                    <th scope="col-2"> Autor </th> <th scope="col-6"> Tema </th> <th scope="col-2"> Data </th> <th scope="col-2"> Missatges </th>{" "}
-                                </tr>{" "}
-                            </thead>{" "}
+                                    <th scope="col-2">Autor</th><th scope="col-6">Tema</th><th scope="col-2">Data</th><th scope="col-2">Missatges</th>
+                                </tr>
+                            </thead>
                             <tbody>
-                                {" "}
-                                {/* <tr key={tema._id} onClick={()=> console.log(tema._id)} > */}{" "}
                                 {temas.map((tema) => (
-                                    
-                                        <tr className="border-4 border-dark rounded-8" key={tema.id}>
-                                            <th scope="row">
-                                                <img src={`Images/Avataaars${tema.user_id}.svg`} className="rounded-circle" alt="avatar" height={50} width={50} />{" "}
-                                            </th>{" "}
-                                            <td> <Link className="border-4 border-dark rounded-8" to={`/details/${tema.id}`}>{tema.title}</Link> </td> <td> {showDate(tema.created_at)} </td> <td> {tema.text} </td>{" "}
-                                        </tr>
-                                ))}{" "}
-                            </tbody>{" "}
-                        </table>{" "}
+                                    <tr className="border-4 border-dark rounded-8" key={tema.id}>
+                                        <th scope="row">
+                                            <img src={`Images/Avataaars${tema.user_id}.svg`} className="rounded-circle" alt="avatar" height={50} width={50} />
+                                        </th>
+                                        <td><Link className="border-4 border-dark rounded-8" to={`/details/${tema.id}`}>{tema.title}</Link></td><td>{showDate(tema.created_at)}</td><td>{tema.text}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
+                        </table>
                     </div>{" "}
                 </div>{" "}
             </div>{" "}

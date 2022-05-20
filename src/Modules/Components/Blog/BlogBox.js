@@ -9,7 +9,7 @@ export default function BlogBox() {
     const [blogList, setBlogList] = useState([])
 
     const generate = () => {
-        const num = parseInt(Math.random() * 1000);
+        const num = parseInt(Math.random() * 500);
         return num;
     }
 
@@ -40,7 +40,7 @@ export default function BlogBox() {
             <Row>
                 {
                     blogList.map((blog) => (
-                        <Col className='m-3' mr='auto'>
+                        <Col className='m-3' mr='auto' key={blog._id}>
                             <Card style={{ width: "35rem", height: "35em" }}>
                                 {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
                                 <motion.img whileHover={{ scale: 1.1 }} className="img-fluid" src={`https://picsum.photos/id/${generate()}/900/500`} alt="" />

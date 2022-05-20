@@ -43,7 +43,7 @@ export default function NavbarWeb() {
                             <motion.a whileHover={{scale: 1.4}} href="https://www.google.es/maps/?hl=es">
                                 <FaInstagram size={25} style={{ fill: "white" }} />
                             </motion.a>
-                            <motion.a whileHover={{scale: 1.4}}a href="https://www.google.es/maps/?hl=es">
+                            <motion.a whileHover={{scale: 1.4}} href="https://www.google.es/maps/?hl=es">
                                 <FaTwitter className='mr-2' size={25} style={{ fill: "white" }} />
                             </motion.a>
                             <motion.a whileHover={{scale: 1.4}} href="https://www.google.es/maps/?hl=es">
