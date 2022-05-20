@@ -81,7 +81,7 @@ export default function ForoListDetails() {
                 <div className="row">
                     <div className="col-md-2 bg-secondary m-1 text-center">
                         <div>
-                            <img src={`Images/Avataaars${respuesta.user_id}.svg`} className="rounded-circle mt-4" alt="avatar" height={50} width={50} />{" "}
+                            <img src={`Images/avataaars${respuesta.user_id}.svg`} className="rounded-circle mt-4" alt="avatar" height={50} width={50} />{" "}
                         </div>{" "}
                         <p className="mt-4"> {respuesta.created_at} </p>{" "}
                     </div>{" "}

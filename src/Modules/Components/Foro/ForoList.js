@@ -81,7 +81,7 @@ export default function ForoList(props) {
                                 {temas.map((tema) => (
                                     <tr className="border-4 border-dark rounded-8" key={tema.id}>
                                         <th scope="row">
-                                            <img src={`Images/Avataaars${tema.user_id}.svg`} className="rounded-circle" alt="avatar" height={50} width={50} />
+                                            <img src={`Images/avataaars${tema.user_id}.svg`} className="rounded-circle" alt="avatar" height={50} width={50} />
                                         </th>
                                         <td><Link className="border-4 border-dark rounded-8" to={`/details/${tema.id}`}>{tema.title}</Link></td><td>{showDate(tema.created_at)}</td><td>{tema.text}</td>
                                     </tr>
