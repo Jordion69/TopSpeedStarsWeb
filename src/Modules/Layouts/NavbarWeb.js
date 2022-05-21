@@ -18,13 +18,13 @@ export default function NavbarWeb() {
         <>
 
         <div className={style.bg}>
-            <Navbar className="navBg" variant="grey" expand="lg">
+            <Navbar className="navBg" variant="dark" expand="lg">
                 <Container>
                     <Navbar.Brand as={Link} to="/">
                         <HeaderLogo />
                     </Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
+                    <Navbar.Toggle aria-controls="basic-navbar-nav navbar-dark"  />
+                    <Navbar.Collapse id="basic-navbar-nav navbar-dark">
                         <Nav className="me-auto">
                             <Nav.Link className='text-white fw-bold  fontSize' as={Link} to="/Foro">
                                 <motion.h4 whileHover={{scale: 1.2}}>Foro</motion.h4>
@@ -53,7 +53,6 @@ export default function NavbarWeb() {
                                 <FaYoutube size={25} style={{ fill: "white" }} />
                             </motion.a>
                             <div className={style.xarxesContainer}>
-                           
                             <HeaderUserLogin />
                             </div>
                         </Nav>
