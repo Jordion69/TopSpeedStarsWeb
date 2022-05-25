@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import Input from "../../UI/Input/Input";
 import { FaGoogle, FaArrowAltCircleRight } from "react-icons/fa";
 import MessageUserUnknown from "../../Components/Header/HeaderMessage/MessageUserUnknown";
@@ -12,21 +12,24 @@ import { Form, FormGroup } from 'react-bootstrap'
 
 export default function LogInForm(props) {
     const { children, onCancel } = props;
+    const usernameRef = useRef(null)
+    const emailRef = useRef(null)
+    const passwordRef = useRef(null)
     const [email, setEmail] = useState("");
     const [pwd, setPwd] = useState("");
+    const [username, setUserName] = useState("");
 
     async function executeConfirm(e) {
         e.preventDefault();
         const data = {
-            email: email,
-            password: pwd,
+            name: usernameRef.current.value,
+            email: emailRef.current.value,
+            password: passwordRef.current.value,
         };
         console.log(data);
         try {
-            const result = await utils.bodyRequest("https://topspeedstarsapi.herokuapp.com/api/login", data, "POST");
-            console.log(result.data.access_token);
-
-            utils.saveSessionStorage("access_token", result.data.access_token);
+            const result = await utils.bodyRequest("https://topspeedstarsapi.herokuapp.com/api/user", data, "POST");
+  
             // login correcte
             console.log(result);
             closeModal();
@@ -46,14 +49,14 @@ export default function LogInForm(props) {
     function closeModal() {
         props.cancel(false);
     }
+    function testUserName(name) {
+        setUserName(name);
+        return true;
+    }
     function executeRegister() {
         console.log("closing register");
         props.cancel(false);
         props.logInOpener();
-    }
-
-    function testUsername(username) {
-        return true;
     }
 
     return (
@@ -72,8 +75,9 @@ export default function LogInForm(props) {
                     type="text" 
                     startVal="" 
                     placeholder="username" 
-                    validation={testUsername} 
+                    validation={testUserName} 
                     timer={200}
+                    ref={usernameRef}
                     ></Form.Control>
                 
                 </FormGroup>
@@ -87,6 +91,8 @@ export default function LogInForm(props) {
                     placeholder="email" 
                     validation={testEmail} 
                     timer={200}
+                    ref={emailRef}
+
                     ></Form.Control>
                     </FormGroup>
                     <FormGroup>
@@ -94,10 +100,12 @@ export default function LogInForm(props) {
                     <Form.Control id="pwd" 
                     label="password"
                     className="form-control m-0 form-label" 
-                    type="pwd" 
+                    type="password" 
                     startVal="" 
                     placeholder="password" 
-                    validation={testPwd} 
+                    validation={testPwd}
+                    ref={passwordRef}
+
                     timer={200}
                     ></Form.Control>               
                 </FormGroup>
@@ -106,7 +114,7 @@ export default function LogInForm(props) {
                     <Form.Control id="repeatPwd" 
                     label="Repeat password"
                     className="form-control m-0 form-label" 
-                    type="pwd" 
+                    type="password" 
                     startVal="" 
                     placeholder="repeat password" 
                     validation={testPwd} 
@@ -117,7 +125,7 @@ export default function LogInForm(props) {
                
                 <div className="mt-4" >
                 <Button className=" mb-3">
-                    <FaArrowAltCircleRight size={50} style={{ fill: "white" }} className="" />
+                    <FaArrowAltCircleRight  onClick={executeConfirm} size={50} style={{ fill: "white" }} className="" />
                 </Button>
                 </div>
                 {/* <div className="mb-3">
