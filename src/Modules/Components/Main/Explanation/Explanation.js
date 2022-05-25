@@ -17,10 +17,10 @@ export default function Explanation() {
                 <Row className="row" >
                     <Col lg={2} />
                     <Col lg={8} className="text-center text-warning">
-                        <h3>LES MILLORS CURSES ESPAIALS</h3>
+                        <h3>LES MILLORS CURSES ESPACIALS</h3>
 						<h3>EMOCIÓ FINS AL FINAL</h3>
                         <h3>GAUDEIX DE CADA SEGON</h3>
-						<h3>SIGAS EL MES RÀPID</h3>
+						<h3>COMPETEIX PER SER EL MES RÀPID</h3>
 						
 
                     </Col>
