@@ -20,7 +20,7 @@ export default function Explanation() {
                         <h3>LES MILLORS CURSES ESPACIALS</h3>
 						<h3>EMOCIÓ FINS AL FINAL</h3>
                         <h3>GAUDEIX DE CADA SEGON</h3>
-						<h3>COMPETEIX PER SER EL MES RÀPID</h3>
+						<h3>COMPETEIX PER SER EL MÉS RÀPID</h3>
 						
 
                     </Col>
